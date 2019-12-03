@@ -48,7 +48,8 @@ def intersection_finder(pair_ls):
     path_2_node_ls=node_tracker(path_2_ls)
 
     #find nodes in common between both lists
-    common_nodes=[node for node in path_1_node_ls if node in path_2_node_ls]
+    set_2=set(path_2_node_ls)
+    common_nodes=[node for node in path_1_node_ls if node in set_2]
 
     #drop (0,0) node
     common_nodes.remove((0,0))
